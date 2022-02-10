@@ -17,7 +17,7 @@ def is_Esprit_Email(value):
 class User(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    email = models.EmailField(validators=[is_Esprit_Email])  # de base charfield
+    email = models.EmailField(verbose_name="Email", null=False, validators=[is_Esprit_Email])  # de base charfield
 
 
     def __str__(self) -> str:
