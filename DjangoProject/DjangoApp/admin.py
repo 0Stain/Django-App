@@ -76,7 +76,9 @@ class ProjetAdmin(admin.ModelAdmin):
         )
     ]
 
-    radio_fields = {'supervisor':admin.VERTICAL}
+    #radio_fields = {'supervisor': admin.VERTICAL}
+    autocomplete_fields = ['supervisor']
+    #empty_value_display = '-empty-'
 
 admin.site.register(Student, StudentAdmin)
 # admin.site.register(Coach,CoachAdmin) // when u write down @admin.register(Coach) it replaces this line
