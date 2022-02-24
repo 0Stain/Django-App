@@ -1,0 +1,12 @@
+{% extends 'app/../../../DjangoProject/templates/base.html' %}
+
+{% block title %}Student Details{% endblock title %}
+
+{% block content %}
+<h1>Student list</h1>
+<ul>
+    {% for s in students %}
+        <li>{{s.first_name}} {{s.last_name}}<ul>Email : {{s.email}}</ul></li>
+    {% endfor %}
+</ul>
+{% endblock content %}

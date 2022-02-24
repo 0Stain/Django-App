@@ -1,0 +1,25 @@
+{% extends 'app/../../../DjangoProject/templates/base.html' %}
+
+{% block title %}Coaches List{% endblock title %}
+{% block content %}
+    <h1>coach list</h1></br>
+<table class="table table-success table-hover">
+    <thead>
+    <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for c in coachs %}
+        <tr>
+        <td>{{c.first_name}}</td>
+        <td>{{c.last_name}}</td>
+        <td>{{c.email}}</td>
+        </tr>
+    {% endfor %}
+
+    </tbody>
+    </table>
+{% endblock content %}
